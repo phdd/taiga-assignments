@@ -6,7 +6,7 @@ taiga(config.baseUrl, config.token)
   .then((data) => {
     console.log(treeFor(data, {
       symbol: false,
-      highlight: true,
+      highlight: false,
       padding: 1
     }))
   })
