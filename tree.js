@@ -6,7 +6,7 @@ taiga(con***REMOVED***g.baseUrl, con***REMOVED***g.token)
   .***REMOVED***((data) => {
     console.log(treeFor(data, {
       symbol: false,
-      highlight: true,
+      highlight: false,
       padding: 1
     ***REMOVED***))
   ***REMOVED***)
