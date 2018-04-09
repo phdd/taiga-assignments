@@ -1,0 +1,17 @@
+{
+  "name": "taiga-stuff",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tree.js",
+  "scripts": {
+    "tree": "node tree.js",
+    "todoist": "node todoist.js"
+  ***REMOVED***,
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.85.0",
+    "request-promise": "^4.2.2",
+    "terminal-tree": "0.0.3"
+  ***REMOVED***
+***REMOVED***
