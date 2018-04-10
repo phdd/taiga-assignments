@@ -1,4 +1,20 @@
-# Usage
+# Taiga Assignments
+
+Show all your Taiga assignments or directly import them to Todoist.
+Your may set up a cronjob or something similar for the sync.
+
+## Requirements
+
+- Node.js
+- Node Package Manager (NPM)
+
+This repository cloned
+
+```
+git clone https://github.com/phdd/taiga-assignments.git
+```
+
+## Usage
 
 1) Install dependencies with `npm i`
 2) Setup environment variables, e.g.
@@ -13,7 +29,7 @@ export TODOIST_TOKEN="in your account settings"
     - show in tree with `npm run tree`
     - import to Todoist with `npm run sync`
 
-# License
+## License
 
 ```
 Copyright 2018 Peter Heisig
