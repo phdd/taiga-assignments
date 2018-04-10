@@ -1,12 +1,15 @@
-const con***REMOVED***g = require('./lib/con***REMOVED***g')
-const taiga = require('./lib/taiga')
+const fetchAssignments = require('./lib/taiga')
 const treeFor = require('terminal-tree')
+const colored = require('chalk')
 
-taiga(con***REMOVED***g.baseUrl, con***REMOVED***g.token)
-  .***REMOVED***((data) => {
-    console.log(treeFor(data, {
+fetchAssignments()
+  .***REMOVED***((projects) => {
+    console.log(treeFor(projects, {
       symbol: false,
-      highlight: false,
-      padding: 1
+      highlight: true,
+      padding: 1,
+      colors: {
+        key: colored.white
+      ***REMOVED***
     ***REMOVED***))
   ***REMOVED***)
