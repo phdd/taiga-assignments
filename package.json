@@ -5,13 +5,15 @@
   "main": "tree.js",
   "scripts": {
     "tree": "node tree.js",
-    "todoist": "node todoist.js"
+    "sync": "node sync.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chalk": "^2.3.2",
     "request": "^2.85.0",
     "request-promise": "^4.2.2",
-    "terminal-tree": "0.0.3"
+    "terminal-tree": "0.0.3",
+    "todoist-js": "^0.3.1"
   }
 }

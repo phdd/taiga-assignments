@@ -1,12 +1,15 @@
-const config = require('./lib/config')
-const taiga = require('./lib/taiga')
+const fetchAssignments = require('./lib/taiga')
 const treeFor = require('terminal-tree')
+const colored = require('chalk')
 
-taiga(config.baseUrl, config.token)
-  .then((data) => {
-    console.log(treeFor(data, {
+fetchAssignments()
+  .then((projects) => {
+    console.log(treeFor(projects, {
       symbol: false,
-      highlight: false,
-      padding: 1
+      highlight: true,
+      padding: 1,
+      colors: {
+        key: colored.white
+      }
     }))
   })
