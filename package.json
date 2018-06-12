@@ -6,7 +6,7 @@
   "scripts": {
     "tree": "node tree.js",
     "sync": "node sync.js"
-  ***REMOVED***,
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -15,5 +15,5 @@
     "request-promise": "^4.2.2",
     "terminal-tree": "0.0.3",
     "todoist-js": "^0.3.1"
-  ***REMOVED***
-***REMOVED***
+  }
+}

@@ -3,13 +3,13 @@ const treeFor = require('terminal-tree')
 const colored = require('chalk')
 
 fetchAssignments()
-  .***REMOVED***((projects) => {
+  .then((projects) => {
     console.log(treeFor(projects, {
       symbol: false,
       highlight: true,
       padding: 1,
       colors: {
         key: colored.white
-      ***REMOVED***
-    ***REMOVED***))
-  ***REMOVED***)
+      }
+    }))
+  })

@@ -7,11 +7,11 @@ const addTaskTo = async (project, text, url) => {
 
   if (noReferencesFound) {
     const task = todoist.items.add(text, project.id)
-    todoist.notes.add(task.id, `See ${url***REMOVED***`)
+    todoist.notes.add(task.id, `See ${url}`)
     todoist.commit()
-    console.log(`task '${text***REMOVED***' created`)
-  ***REMOVED***
-***REMOVED***
+    console.log(`task '${text}' created`)
+  }
+}
 
 Promise
   .all([
@@ -19,10 +19,10 @@ Promise
     fetchAssignments()
   ])
 
-  .***REMOVED***((results) => {
+  .then((results) => {
     const projects = results[1]
 
-    const inbox = todoist.state.projects.***REMOVED***nd(
+    const inbox = todoist.state.projects.find(
       project => project.name === 'Inbox')
 
     for (const projectName in projects) {
@@ -35,12 +35,12 @@ Promise
           for (const taskName in story.tasks) {
             const task = story.tasks[taskName]
             addTaskTo(inbox,
-              `${projectName***REMOVED***: ${storyName***REMOVED***: ${taskName***REMOVED***`, task.url)
-          ***REMOVED***
-        ***REMOVED*** else {
+              `${projectName}: ${storyName}: ${taskName}`, task.url)
+          }
+        } else {
           addTaskTo(inbox,
-            `${projectName***REMOVED***: ${storyName***REMOVED***`, story.url)
-        ***REMOVED***
-      ***REMOVED***
-    ***REMOVED***
-  ***REMOVED***)
+            `${projectName}: ${storyName}`, story.url)
+        }
+      }
+    }
+  })
